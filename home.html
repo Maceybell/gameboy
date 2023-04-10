@@ -14,6 +14,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
   </head>
 
   <body>
@@ -22,16 +34,88 @@
         <img src="./images/gameboy.png" alt="" />
       </button>
     </header>
-    
+
     <div class="gameboy">
       <div class="screen-container">
         <div class="screen">
+          <div class="projects component hide">
+            <div class="projects-container">
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+              <!-- Full-width images with number and caption text -->
+              <div class="mySlides fade">
+                <a
+                  class="project-link"
+                  href="https://www.youtube.com/watch?v=tgMuTtN834Q"
+                  ><img src="./images/wish.png"
+                /></a>
+              </div>
+
+              <div class="mySlides fade">
+                <a
+                  class="project-link"
+                  href="https://triangle-dummy-app.netlify.app/"
+                  ><img src="./images/triangle.png"
+                /></a>
+              </div>
+
+              <div class="mySlides fade">
+                <a class="project-link" href="https://nakedsmokes.com/"
+                  ><img src="./images/nakedsmokes.png"
+                /></a>
+              </div>
+
+              <!-- Next and previous buttons -->
+
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+          </div>
+          <div class="component skills hide">
+            <div id="scroll-container">
+              <div id="scroll-text">
+                <i class="fa-brands fa-aws" style="color: #ffffff"></i>
+                <i class="fa-brands fa-js" style="color: #ffffff"></i>
+                <i class="fa-brands fa-react" style="color: #ffffff"></i>
+      
+                <i class="devicon-visualstudio-plain"></i>
+                
+                <i class="devicon-css3-plain"></i>
+                
+      
+                <i class="devicon-express-original"></i>
+                          
+                <i class="devicon-gimp-plain"></i>
+                
+                <i class="devicon-git-plain"></i>
+                
+                <i class="devicon-github-original"></i>
+                
+                <i class="devicon-heroku-original"></i>
+                
+                <i class="devicon-html5-plain"></i>
+                
+                <i class="devicon-mysql-plain"></i>
+                
+                <i class="devicon-npm-original-wordmark"></i>
+                
+                <i class="devicon-postgresql-plain"></i>
+                
+                <i class="devicon-selenium-original"></i>
+                
+                <i class="devicon-sequelize-plain"></i>
+                
+                <i class="devicon-wordpress-plain"></i>
+                
+              </div>
+            </div>
+          </div>
+
           <div class="menu">
-            <button> PROJECTS</button>
-            <button> SKILLS</button>
-            <button> ABOUT</button>
-            <button> CONTACT</button>
-            <button> RESUME</button>
+            <button>PROJECTS</button>
+            <button>SKILLS</button>
+            <button>ABOUT</button>
+            <button>CONTACT</button>
+            <button>RESUME</button>
           </div>
         </div>
         <div class="macey">Macey <span class="bell">Bell</span></div>
@@ -62,8 +146,6 @@
       </div>
       <button class="close">X</button>
     </div>
-
-    
 
     <svg
       xmlns="http://www.w3.org/2000/svg"

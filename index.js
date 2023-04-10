@@ -7,13 +7,13 @@ const screen = document.querySelector(".screen");
 
 // Menu and menu items
 const menu = document.querySelector(".menu");
-const menuItems = document.querySelectorAll(".menu a");
-const projectsItem = document.querySelector(".menu a:nth-child(1)");
-const skillsItem = document.querySelector(".menu a:nth-child(2)");
-const aboutItem = document.querySelector(".menu a:nth-child(3)");
-const contactItem = document.querySelector(".menu a:nth-child(4)");
-const resumeItem = document.querySelector(".menu a:nth-child(5)");
-const focusedItem = document.querySelector(".menu a:focus");
+const menuItems = document.querySelectorAll(".menu button");
+const projectsItem = document.querySelector(".menu button:nth-child(1)");
+const skillsItem = document.querySelector(".menu button:nth-child(2)");
+const aboutItem = document.querySelector(".menu button:nth-child(3)");
+const contactItem = document.querySelector(".menu button:nth-child(4)");
+const resumeItem = document.querySelector(".menu button:nth-child(5)");
+const focusedItem = document.querySelector(".menu button:focus");
 
 // Macey container and Macey Bell span
 const maceyContainer = document.querySelector(".macey");
@@ -39,6 +39,10 @@ const menuButton = menuOval.querySelector(".menu-btn");
 
 const xButton = document.querySelector(".close");
 const openGameboyButton = document.querySelector(".gameboy-toggle");
+const projects = document.querySelector(".projects")
+const projectLink = (document.querySelectorAll(".project-link"))
+const skills = document.querySelector(".skills")
+
 
 let lastHoveredItem = null;
 
@@ -50,7 +54,7 @@ window.addEventListener("load", function () {
 });
 
 // Remove focus from any previously focused items when hovering over a new menu item
-document.querySelectorAll(".menu a").forEach((item) => {
+document.querySelectorAll(".menu button").forEach((item) => {
   item.addEventListener("mouseover", function () {
     if (lastHoveredItem !== this) {
       // Remove focus from any previously focused items
@@ -103,7 +107,7 @@ aButton.addEventListener("click", () => {
   // Check if the last focused item is still visible on the screen
   if (getComputedStyle(menu).display !== "none") {
     lastFocusedItem.click();
-  }
+  } 
 });
 
 //Hide the menu when window is blurred
@@ -167,6 +171,59 @@ upButton.addEventListener("click", () => {
   }
 });
 
+projectsItem.addEventListener("click", () => {
+    menu.classList.add("hide")
+    skills.classList.add("hide")
+    // about.classList.add("hide")
+    // contact.classList.add("hide")
+    // resume.classList.add("hide")
+    projects.classList.remove("hide")
+    
+})
+skillsItem.addEventListener("click", () => {
+    menu.classList.add("hide")
+    skills.classList.remove("hide")
+    projects.classList.add("hide")
+    
+})
+
 /*/MENU CONTROLS/*/
 
 
+/*/PROJECTS /*/
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+rightButton.addEventListener("click", () => {
+    plusSlides(+1)
+})
+leftButton.addEventListener("click", () => {
+    plusSlides(-1)
+})
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+
+/*/PRoJECTS/*/

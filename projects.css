@@ -1,0 +1,66 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.component{
+    width: 325px;
+    height: 255px;
+    background-image: url("./images/creditsbg.jpg");
+    border-radius: 10px;
+}
+
+#scroll-container {
+    border: 3px solid black;
+    border-radius: 10px;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  #scroll-text {
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+    /* animation properties */
+    -moz-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 15s linear infinite;
+  }
+  
+  /* for Firefox */
+  @-moz-keyframes my-animation {
+    from { -moz-transform: translateY(100%); }
+    to { -moz-transform: translateY(-200%); }
+  }
+  
+  /* for Chrome */
+  @-webkit-keyframes my-animation {
+    from { -webkit-transform: translateY(100%); }
+    to { -webkit-transform: translateY(-200%); }
+  }
+  
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateY(100%);
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+    }
+    to {
+      -moz-transform: translateY(-200%);
+      -webkit-transform: translateY(-200%);
+      transform: translateY(-200%);
+    }
+  }
+
+  i{
+    color: white;
+    font-size: 30px;
+  }
