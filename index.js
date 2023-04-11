@@ -42,6 +42,7 @@ const openGameboyButton = document.querySelector(".gameboy-toggle");
 const projects = document.querySelector(".projects")
 const projectLink = (document.querySelectorAll(".project-link"))
 const skills = document.querySelector(".skills")
+const about = document.querySelector(".about")
 
 
 let lastHoveredItem = null;
@@ -200,10 +201,12 @@ function plusSlides(n) {
 }
 
 rightButton.addEventListener("click", () => {
-    plusSlides(+1)
+    if (getComputedStyle(projects).display !== "none"){
+    plusSlides(+1)}
 })
 leftButton.addEventListener("click", () => {
-    plusSlides(-1)
+    if (getComputedStyle(projects).display !== "none"){
+        plusSlides(-1)}
 })
 
 // Thumbnail image controls
@@ -227,3 +230,5 @@ function showSlides(n) {
 }
 
 /*/PRoJECTS/*/
+
+/*/ ABOUT /*/

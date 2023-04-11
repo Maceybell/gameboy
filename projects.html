@@ -5,59 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://use.typekit.net/wqo7wqs.css" />
     <link rel="stylesheet" href="projects.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
-    />
   </head>
   <body>
-    <div class="component skills">
-      <div id="scroll-container">
-        <div id="scroll-text">
-          <i class="fa-brands fa-aws" style="color: #ffffff"></i>
-          <i class="fa-brands fa-js" style="color: #ffffff"></i>
-          <i class="fa-brands fa-react" style="color: #ffffff"></i>
+    <div class="about component">
+      <img class="macey-img" src="./images/macey.png" alt="" />
 
-          <i class="devicon-visualstudio-plain"></i>
-          
-          <i class="devicon-css3-plain"></i>
-          
+      <div class="about-container" onclick="plusSlides(1)">
+    
 
-          <i class="devicon-express-original"></i>
-                    
-          <i class="devicon-gimp-plain"></i>
-          
-          <i class="devicon-git-plain"></i>
-          
-          <i class="devicon-github-original"></i>
-          
-          <i class="devicon-heroku-original"></i>
-          
-          <i class="devicon-html5-plain"></i>
-          
-          <i class="devicon-mysql-plain"></i>
-          
-          <i class="devicon-npm-original-wordmark"></i>
-          
-          <i class="devicon-postgresql-plain"></i>
-          
-          <i class="devicon-selenium-original"></i>
-          
-          <i class="devicon-sequelize-plain"></i>
-          
-          <i class="devicon-wordpress-plain"></i>
-          
+        <!-- Full-width images with number and caption text -->
+        
+
+        <!-- Next and previous buttons -->
+
+        
+
+        <div class="about-text">Hi! (Press A or click here)...</div>
+        <div class="about-text">I'm Macey..</div>
+        <div class="about-text">I'm a tech nerd and a people person...</div>
+        <div class="about-text">
+          Hi! (Press A or click here)...
+          <div class="about-menu">
+            <button>Software</button> <button>Sales</button>
+          </div>
         </div>
       </div>
     </div>
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      rightButton.addEventListener("click", () => {
+        if (getComputedStyle(projects).display !== "none") {
+          plusSlides(+1);
+        }
+      });
+
+      let aboutContainerOne = document.querySelector(".about-container");
+
+      aboutContainerOne.addEventListener("click", () => {
+        plusSlides(+1);
+      });
+
+
+     
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("about-text");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = slides.length;
+        }
+        if (n < 1) {
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+      }
+    </script>
   </body>
 </html>
