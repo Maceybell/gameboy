@@ -76,7 +76,7 @@ document.querySelector(".menu").addEventListener("focus", function () {
 });
 
 // Reset the last hovered item when a menu item is clicked
-document.querySelectorAll(".menu a").forEach((item) => {
+document.querySelectorAll(".menu button").forEach((item) => {
   item.addEventListener("click", function () {
     lastHoveredItem = null;
   });

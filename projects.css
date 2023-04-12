@@ -9,6 +9,10 @@
   src: url("./images/PokemonGB.ttf");
 }
 
+.about {
+  height: 255px;
+}
+
 .component {
   width: 325px;
   height: 255px;
@@ -23,13 +27,31 @@
   height: 185px;
 }
 
+.snowboard {
+    height: 185px;
+    display: flex;
+    align-items: end;
+}
+
+.snowboard img{
+    width: 150px;
+}
+
 .about-container {
   width: 290px;
   height: 60px;
 }
 
-.about-text {
+.software-container {
+  width: 290px;
+  height: 60px;
+}
+.sales-container {
+  width: 290px;
+  height: 60px;
+}
 
+.about-text {
   width: 290px;
   height: 60px;
   border: dashed 1px black;
@@ -46,22 +68,84 @@
   display: none;
 }
 
-.about-menu {
+.software-text {
+  width: 290px;
+  height: 60px;
   border: dashed 1px black;
-  height: 150px;
-  width: 100px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  background-color: white;
+  font-family: "pokemonGB", sans-serif;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  
+}
+.sales-text {
+  width: 290px;
+  height: 60px;
+  border: dashed 1px black;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  background-color: white;
+  font-family: "pokemonGB", sans-serif;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.life-text {
+  width: 290px;
+  height: 60px;
+  border: dashed 1px black;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  background-color: white;
+  font-family: "pokemonGB", sans-serif;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu {
+  border: dashed 1px black;
+  width: 120px;
   padding: 5px;
   background-color: white;
   position: relative;
+  bottom: 235px;
+  right: 90px;
+  padding: 7px;
 }
 
-.about-menu button {
+.menu button {
   font-family: "pokemonGB";
   font-size: 10px;
   background: none;
   border: none;
 }
 
-.hide{
-    display: none
+.menu button:focus {
+  outline: none;
+  border: none;
 }
+
+.menu button:focus::before {
+  content: "➤"; /* Add your arrow icon here */
+}
+
+.hide {
+  display: none;
+}
+

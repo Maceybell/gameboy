@@ -121,7 +121,7 @@ svg {
   display: flex;
   flex-direction: column;
   width: 110px;
-  height: fit-content;
+  height: 100px;
   outline: white 1px solid;
   padding: 7px;
   font-family: "tenby-stencil", sans-serif;

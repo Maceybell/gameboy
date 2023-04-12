@@ -11,73 +11,345 @@
   <body>
     <div class="about component">
       <img class="macey-img" src="./images/macey.png" alt="" />
+      <div class="snowboard hide"><img  src="./images/snowboarding.png" alt=""></div>
 
       <div class="about-container" onclick="plusSlides(1)">
-    
-
         <!-- Full-width images with number and caption text -->
-        
 
         <!-- Next and previous buttons -->
 
-        
-
         <div class="about-text">Hi! (Press A or click here)...</div>
         <div class="about-text">I'm Macey..</div>
-        <div class="about-text">I'm a tech nerd and a people person...</div>
-        <div class="about-text">
-          Hi! (Press A or click here)...
-          <div class="about-menu">
-            <button>Software</button> <button>Sales</button>
-          </div>
+        <div class="about-text" onclick="showMenu()">
+          I'm a tech nerd and a people person...
         </div>
+        <div class="about-text">
+          What else would you like to know more about?
+        </div>
+      </div>
+      <div class="software-container hide">
+        <div class="software-text">I'm a full stack web developer...</div>
+        <div class="software-text">
+          I've built websites for clients who offer varying products and
+          services...
+        </div>
+        <div class="software-text">
+          And have worked on a legal software to improve law practice
+          efficiency...
+        </div>
+        <div class="software-text">
+          I also have some personal projects that maybe someday I will go live
+          with as a side hustle...
+        </div>
+        <div class="software-text">I love learning new things...</div>
+        <div class="software-text">
+          So technology excites me because there's always something new to be
+          learned...
+        </div>
+        <div class="software-text">
+          I have found myself working on a project from 9am to midnight
+          forgetting to take any breaks...
+        </div>
+        <div class="software-text">
+          Or working late because I'm thrilled by a problem to solve or a
+          function to build...
+        </div>
+        <div class="software-text">
+          I grew up playing video games with my brother and...
+        </div>
+        <div class="software-text" onclick="showMenu()">
+          ...coding gives me the same immersive feeling as a great game...
+        </div>
+        <div class="software-text">
+          What else would you like to know more about?
+        </div>
+      </div>
+      <div class="sales-container hide">
+        <div class="sales-text">
+          I have spent several years in sales and management...
+        </div>
+        <div class="sales-text">I worked door-to-door in 5 states...</div>
+        <div class="sales-text">Knocking from 10am to 9pm or later...</div>
+        <div class="sales-text">
+          And opened and ran a laser clinic where I did a million dollars in
+          sales in a year...
+        </div>
+        <div class="sales-text">
+          I've been involved with recruiting, training, running meetings...
+        </div>
+        <div class="sales-text">scheduling, permitting, supply chain...</div>
+        <div class="sales-text">
+          And have worked on some of the best teams with the best people...
+        </div>
+        <div class="sales-text">
+          I believe in operating with only high-integrity sales methods...
+        </div>
+        <div class="sales-text">
+          And underpromising and overdelivering to my clients and my
+          employees...
+        </div>
+        <div class="sales-text">
+          I love taking a genuine interest in people...
+        </div>
+        <div class="sales-text">
+          And finding ways to connect in a meaningful way...
+        </div>
+        <div class="sales-text" onclick="showMenu()">
+          I bet I'd love to get to know you, too!..
+        </div>
+        <div class="sales-text">
+          What else would you like to know more about?
+        </div>
+      </div>
+      <div class="life-container hide">
+        <div class="life-text">
+          I do lots of other things...
+        </div>
+        <div class="life-text" onclick="hideMacey()">I'll show you. I'll be right back...</div>
+        <div class="life-text">...</div>
+        <div class="life-text">
+          ...
+        </div>
+        <div class="life-text" onclick="toSnowboarder()">
+          Uh oh...
+        </div>
+        <div class="life-text">Oof...</div>
+        <div class="life-text">
+          I snowboard but obviously I sometimes crash...
+        </div>
+        <div class="life-text">
+          I've been to 15 different resorts and love exploring new runs...
+        </div>
+        <div class="life-text" onclick="hideSnowboard()">
+          ...
+        </div>
+        <div class="life-text">
+          I love taking a genuine interest in people...
+        </div>
+        <div class="life-text">
+          And finding ways to connect in a meaningful way...
+        </div>
+        <div class="life-text" onclick="showMenu()">
+          I bet I'd love to get to know you, too!..
+        </div>
+        <div class="life-text">
+          What else would you like to know more about?
+        </div>
+      </div>
+      <div class="menu hide">
+        <button>Software</button>
+        <button>Sales</button><br>
+        <button>Life</button>
       </div>
     </div>
     <script>
-      let slideIndex = 1;
-      showSlides(slideIndex);
+      document.querySelectorAll(".menu button").forEach((menuItem) => {
+        menuItem.addEventListener("mouseover", () => {
+          menuItem.focus();
+        });
+      });
+
+      let aboutSlideIndex = 1;
+      showAbout(aboutSlideIndex);
 
       // Next/previous controls
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
+      function plusAbout(n) {
+        showAbout((aboutSlideIndex += n));
       }
-
-      rightButton.addEventListener("click", () => {
-        if (getComputedStyle(projects).display !== "none") {
-          plusSlides(+1);
-        }
-      });
 
       let aboutContainerOne = document.querySelector(".about-container");
 
       aboutContainerOne.addEventListener("click", () => {
-        plusSlides(+1);
+        plusAbout(+1);
       });
 
-
-     
-
       // Thumbnail image controls
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
+
+      function currentAbout(n) {
+        showAbout((aboutSlideIndex = n));
       }
 
-      function showSlides(n) {
+      function showAbout(n) {
         let i;
-        let slides = document.getElementsByClassName("about-text");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-          slideIndex = slides.length;
+        let aboutSlides = document.getElementsByClassName("about-text");
+
+        if (n > aboutSlides.length) {
+          aboutSlideIndex = aboutSlides.length;
         }
         if (n < 1) {
         }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
+        for (i = 0; i < aboutSlides.length; i++) {
+          aboutSlides[i].style.display = "none";
         }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
+
+        aboutSlides[aboutSlideIndex - 1].style.display = "block";
+      }
+
+      //SOFTWARE SLIDE SECTION//
+
+      let softwareSlideIndex = 1;
+      showSoftware(softwareSlideIndex);
+
+      function plusSoftware(n) {
+        showSoftware((softwareSlideIndex += n));
+      }
+
+      document
+        .querySelector(".software-container")
+        .addEventListener("click", () => {
+          plusSoftware(+1);
+        });
+
+      function currentSoftware(n) {
+        showSoftware((softwareSlideIndex = n));
+      }
+
+      function showSoftware(n) {
+        let i;
+        let softwareSlides = document.getElementsByClassName("software-text");
+
+        if (n > softwareSlides.length) {
+          softwareSlideIndex = softwareSlides.length;
         }
-        slides[slideIndex - 1].style.display = "block";
+        if (n < 1) {
+        }
+        for (i = 0; i < softwareSlides.length; i++) {
+          softwareSlides[i].style.display = "none";
+        }
+
+        softwareSlides[softwareSlideIndex - 1].style.display = "block";
+      }
+
+      document
+        .querySelector(".menu button:nth-child(1)")
+        .addEventListener("click", () => {
+          document.querySelector(".about-container").classList.add("hide");
+          document.querySelector(".menu").classList.add("hide");
+          document.querySelector(".sales-container").classList.add("hide")
+          document.querySelector(".life-container").classList.add("hide")
+          document
+            .querySelector(".software-container")
+            .classList.remove("hide");
+            softwareSlideIndex = 1;
+            showSoftware();
+        });
+
+      //SOFTWARE SLIDE SECTION//
+
+      //SALES SLIDE SECTION//
+
+      let salesSlideIndex = 1;
+      showSales(salesSlideIndex);
+
+      function plusSales(n) {
+        showSales((salesSlideIndex += n));
+      }
+
+      document
+        .querySelector(".sales-container")
+        .addEventListener("click", () => {
+          plusSales(+1);
+        });
+
+      function currentSales(n) {
+        showSales((salesSlideIndex = n));
+      }
+
+      function showSales(n) {
+        let i;
+        let salesSlides = document.getElementsByClassName("sales-text");
+
+        if (n > salesSlides.length) {
+          salesSlideIndex = salesSlides.length;
+        }
+        if (n < 1) {
+        }
+        for (i = 0; i < salesSlides.length; i++) {
+          salesSlides[i].style.display = "none";
+        }
+
+        salesSlides[salesSlideIndex - 1].style.display = "block";
+      }
+
+      document
+        .querySelector(".menu button:nth-child(2)")
+        .addEventListener("click", () => {
+          document.querySelector(".about-container").classList.add("hide");
+          document.querySelector(".menu").classList.add("hide");
+          document.querySelector(".software-container").classList.add("hide")
+          document.querySelector(".life-container").classList.add("hide")
+          document.querySelector(".sales-container").classList.remove("hide");
+          salesSlideIndex = 1;
+          showSales();
+          
+          
+        });
+      //SALES SLIDE SECTION//
+      //LIFE SLIDE SECTION//
+
+      let lifeSlideIndex = 1;
+      showLife(lifeSlideIndex);
+
+      function plusLife(n) {
+        showLife((lifeSlideIndex += n));
+      }
+
+      document
+        .querySelector(".life-container")
+        .addEventListener("click", () => {
+          plusLife(+1);
+        });
+
+      function currentLife(n) {
+        showLife((lifeSlideIndex = n));
+      }
+
+      function showLife(n) {
+        let i;
+        let lifeSlides = document.getElementsByClassName("life-text");
+
+        if (n > lifeSlides.length) {
+          lifeSlideIndex = lifeSlides.length;
+        }
+        if (n < 1) {
+        }
+        for (i = 0; i < lifeSlides.length; i++) {
+          lifeSlides[i].style.display = "none";
+        }
+
+        lifeSlides[lifeSlideIndex - 1].style.display = "block";
+      }
+
+      document
+        .querySelector(".menu button:nth-child(4)")
+        .addEventListener("click", () => {
+          document.querySelector(".about-container").classList.add("hide");
+          document.querySelector(".menu").classList.add("hide");
+          document.querySelector(".life-container").classList.remove("hide");
+
+        });
+
+        function hideMacey(){
+            document.querySelector(".macey-img").style.opacity = "0%"
+        }
+        function toSnowboarder () {
+            document.querySelector(".macey-img").classList.add("hide")
+            document.querySelector(".snowboard").classList.remove("hide")
+        }
+
+        function hideSnowboard (){
+            document.querySelector(".snowboard").classList.add("hide")
+            document.querySelector(".macey-img").classList.remove("hide")
+            document.querySelector(".macey-img").style.opacity = "100%";
+            
+            
+        }
+
+      //LIFE SLIDE SECTION//
+
+      function showMenu() {
+        document.querySelector(".menu").classList.remove("hide")
+        document.querySelector(".menu button:nth-child(1)").focus();
       }
     </script>
   </body>
