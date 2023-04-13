@@ -175,7 +175,7 @@ upButton.addEventListener("click", () => {
 projectsItem.addEventListener("click", () => {
     menu.classList.add("hide")
     skills.classList.add("hide")
-    // about.classList.add("hide")
+    about.classList.add("hide")
     // contact.classList.add("hide")
     // resume.classList.add("hide")
     projects.classList.remove("hide")
@@ -185,6 +185,14 @@ skillsItem.addEventListener("click", () => {
     menu.classList.add("hide")
     skills.classList.remove("hide")
     projects.classList.add("hide")
+    about.classList.add("hide")
+    
+})
+aboutItem.addEventListener("click", () => {
+    menu.classList.add("hide")
+    skills.classList.add("hide")
+    projects.classList.add("hide")
+    about.classList.remove("hide")
     
 })
 
@@ -230,5 +238,239 @@ function showSlides(n) {
 }
 
 /*/PRoJECTS/*/
+
+/*/ ABOUT /*/
+document.querySelectorAll(".about-menu button").forEach((menuItem) => {
+    menuItem.addEventListener("mouseover", () => {
+      menuItem.focus();
+    });
+  });
+
+  let aboutSlideIndex = 1;
+  showAbout(aboutSlideIndex);
+
+  // Next/previous controls
+  function plusAbout(n) {
+    showAbout((aboutSlideIndex += n));
+  }
+
+  let aboutContainerOne = document.querySelector(".about-container");
+
+  aboutContainerOne.addEventListener("click", () => {
+    plusAbout(+1);
+  });
+
+  // Thumbnail image controls
+
+  function currentAbout(n) {
+    showAbout((aboutSlideIndex = n));
+  }
+
+  function showAbout(n) {
+    let i;
+    let aboutSlides = document.getElementsByClassName("about-text");
+
+    if (n > aboutSlides.length) {
+      aboutSlideIndex = aboutSlides.length;
+    }
+    if (n < 1) {
+    }
+    for (i = 0; i < aboutSlides.length; i++) {
+      aboutSlides[i].style.display = "none";
+    }
+
+    aboutSlides[aboutSlideIndex - 1].style.display = "block";
+  }
+
+  //SOFTWARE SLIDE SECTION//
+
+  let softwareSlideIndex = 1;
+  showSoftware(softwareSlideIndex);
+
+  function plusSoftware(n) {
+    showSoftware((softwareSlideIndex += n));
+  }
+
+  document
+    .querySelector(".software-container")
+    .addEventListener("click", () => {
+      plusSoftware(+1);
+    });
+
+  function currentSoftware(n) {
+    showSoftware((softwareSlideIndex = n));
+  }
+
+  function showSoftware(n) {
+    let i;
+    let softwareSlides = document.getElementsByClassName("software-text");
+
+    if (n > softwareSlides.length) {
+      softwareSlideIndex = softwareSlides.length;
+    }
+    if (n < 1) {
+    }
+    for (i = 0; i < softwareSlides.length; i++) {
+      softwareSlides[i].style.display = "none";
+    }
+
+    softwareSlides[softwareSlideIndex - 1].style.display = "block";
+  }
+
+  document
+    .querySelector(".about-menu button:nth-child(1)")
+    .addEventListener("click", () => {
+      document.querySelector(".about-container").classList.add("hide");
+      document.querySelector(".about-menu").classList.add("hide");
+      document.querySelector(".sales-container").classList.add("hide");
+      document.querySelector(".life-container").classList.add("hide");
+      document
+        .querySelector(".software-container")
+        .classList.remove("hide");
+      softwareSlideIndex = 1;
+      showSoftware();
+    });
+
+  //SOFTWARE SLIDE SECTION//
+
+  //SALES SLIDE SECTION//
+
+  let salesSlideIndex = 1;
+  showSales(salesSlideIndex);
+
+  function plusSales(n) {
+    showSales((salesSlideIndex += n));
+  }
+
+  document
+    .querySelector(".sales-container")
+    .addEventListener("click", () => {
+      plusSales(+1);
+    });
+
+  function currentSales(n) {
+    showSales((salesSlideIndex = n));
+  }
+
+  function showSales(n) {
+    let i;
+    let salesSlides = document.getElementsByClassName("sales-text");
+
+    if (n > salesSlides.length) {
+      salesSlideIndex = salesSlides.length;
+    }
+    if (n < 1) {
+    }
+    for (i = 0; i < salesSlides.length; i++) {
+      salesSlides[i].style.display = "none";
+    }
+
+    salesSlides[salesSlideIndex - 1].style.display = "block";
+  }
+
+  document
+    .querySelector(".about-menu button:nth-child(2)")
+    .addEventListener("click", () => {
+      document.querySelector(".about-container").classList.add("hide");
+      document.querySelector(".about-menu").classList.add("hide");
+      document.querySelector(".software-container").classList.add("hide");
+      document.querySelector(".life-container").classList.add("hide");
+      document.querySelector(".sales-container").classList.remove("hide");
+      salesSlideIndex = 1;
+      showSales();
+    });
+  //SALES SLIDE SECTION//
+  //LIFE SLIDE SECTION//
+
+  let lifeSlideIndex = 1;
+  showLife(lifeSlideIndex);
+
+  function plusLife(n) {
+    showLife((lifeSlideIndex += n));
+  }
+
+  document
+    .querySelector(".life-container")
+    .addEventListener("click", () => {
+      plusLife(+1);
+    });
+
+  function currentLife(n) {
+    showLife((lifeSlideIndex = n));
+  }
+
+  function showLife(n) {
+    let i;
+    let lifeSlides = document.getElementsByClassName("life-text");
+
+    if (n > lifeSlides.length) {
+      lifeSlideIndex = lifeSlides.length;
+    }
+    if (n < 1) {
+    }
+    for (i = 0; i < lifeSlides.length; i++) {
+      lifeSlides[i].style.display = "none";
+    }
+
+    lifeSlides[lifeSlideIndex - 1].style.display = "block";
+  }
+
+  document
+    .querySelector(".about-menu button:nth-child(4)")
+    .addEventListener("click", () => {
+      document.querySelector(".about-container").classList.add("hide");
+      document.querySelector(".about-menu").classList.add("hide");
+      document.querySelector(".software-container").classList.add("hide");
+      document.querySelector(".sales-container").classList.add("hide");
+      document.querySelector(".life-container").classList.remove("hide");
+      lifeSlideIndex = 1;
+      showLife();
+    });
+
+  function hideMacey() {
+    document.querySelector(".macey-img").style.opacity = "0%";
+  }
+  function toSnowboarder() {
+    document.querySelector(".macey-img").classList.add("hide");
+    document.querySelector(".snowboard").classList.remove("hide");
+  }
+
+  function hideSnowboard() {
+    document.querySelector(".snowboard").classList.add("hide");
+    document.querySelector(".macey-img").classList.remove("hide");
+    document.querySelector(".macey-img").style.opacity = "100%";
+  }
+
+  function addConcert(){
+    
+    document.querySelector(".about").style.backgroundImage="url('./images/concert.jpg')"
+    document.querySelector(".about").style.objectFit = "cover"
+  
+    
+  }
+
+  function addHike(){
+    document.querySelector(".about").style.backgroundImage="url('./images/hike.jpg')"
+    document.querySelector(".about").style.backgroundSize="cover"
+  }
+
+  function removeBackground(){
+    document.querySelector(".about").style.backgroundImage="none"
+  }
+
+  function zelda(){
+    document.querySelector(".macey-img").src = "./images/zelda.png"
+  }
+
+  function toMacey(){
+    document.querySelector(".macey-img").src = "./images/macey.png"
+  }
+
+  //LIFE SLIDE SECTION//
+
+  function showMenu() {
+    document.querySelector(".about-menu").classList.remove("hide");
+    document.querySelector(".about-menu button:nth-child(1)").focus();
+  }
 
 /*/ ABOUT /*/
