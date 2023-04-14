@@ -43,6 +43,7 @@ const projects = document.querySelector(".projects")
 const projectLink = (document.querySelectorAll(".project-link"))
 const skills = document.querySelector(".skills")
 const about = document.querySelector(".about")
+const contact = document.querySelector(".contact")
 
 
 let lastHoveredItem = null;
@@ -176,9 +177,10 @@ projectsItem.addEventListener("click", () => {
     menu.classList.add("hide")
     skills.classList.add("hide")
     about.classList.add("hide")
-    // contact.classList.add("hide")
+    contact.classList.add("hide")
     // resume.classList.add("hide")
     projects.classList.remove("hide")
+
     
 })
 skillsItem.addEventListener("click", () => {
@@ -186,6 +188,7 @@ skillsItem.addEventListener("click", () => {
     skills.classList.remove("hide")
     projects.classList.add("hide")
     about.classList.add("hide")
+    contact.classList.add("hide")
     
 })
 aboutItem.addEventListener("click", () => {
@@ -193,6 +196,16 @@ aboutItem.addEventListener("click", () => {
     skills.classList.add("hide")
     projects.classList.add("hide")
     about.classList.remove("hide")
+    contact.classList.add("hide")
+    
+})
+contactItem.addEventListener("click", () => {
+    menu.classList.add("hide")
+    skills.classList.add("hide")
+    projects.classList.add("hide")
+    about.classList.add("hide")
+    contact.classList.remove("hide")
+    
     
 })
 
@@ -474,3 +487,14 @@ document.querySelectorAll(".about-menu button").forEach((menuItem) => {
   }
 
 /*/ ABOUT /*/
+
+/*/ CONTACT /*/
+
+function email(){
+    document.querySelector(".contact-text").innerHTML="maceytbell@gmail.com"
+}
+function discord(){
+    document.querySelector(".contact-text").innerHTML="Macewyndu#8617"
+}
+
+/*/ CONTACT /*/

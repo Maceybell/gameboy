@@ -289,9 +289,7 @@ a:focus {
   top: 100px;
 }
 
-.hide {
-  display: none;
-}
+
 
 .close {
   border-radius: 100px;
@@ -622,6 +620,65 @@ body {
 
 .about-menu button:focus::before {
   content: "➤"; /* Add your arrow icon here */
+}
+
+.hide {
+  display: none;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:end;
+  background-color: black;
+}
+
+.contacts-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  justify-content: space-evenly;
+
+}
+.contact-button {
+  width: 25%;
+  height: 70px;
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(7, 226, 254);
+  background-color: rgb(215, 249, 250);
+}
+
+.contact-a {
+  width: 25%;
+  height: 70px;
+  font-size: 30px;
+  cursor: pointer;
+  border: 1px solid rgb(7, 226, 254);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(215, 249, 250);
+
+}
+
+.contact-a:hover, .contact-button:hover{
+    background-color: #98ffff;
+}
+
+.contact-text{
+    color: #98ffff;
+    margin: 30px;
+    height: 30px;
+    font-family: "tenby-stencil", sans-serif;
+    font-size: 24px;
 }
 
 .hide {
