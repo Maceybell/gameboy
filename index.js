@@ -44,6 +44,7 @@ const projectLink = (document.querySelectorAll(".project-link"))
 const skills = document.querySelector(".skills")
 const about = document.querySelector(".about")
 const contact = document.querySelector(".contact")
+const resume = document.querySelector(".resume")
 
 
 let lastHoveredItem = null;
@@ -178,7 +179,7 @@ projectsItem.addEventListener("click", () => {
     skills.classList.add("hide")
     about.classList.add("hide")
     contact.classList.add("hide")
-    // resume.classList.add("hide")
+    resume.classList.add("hide")
     projects.classList.remove("hide")
 
     
@@ -189,6 +190,7 @@ skillsItem.addEventListener("click", () => {
     projects.classList.add("hide")
     about.classList.add("hide")
     contact.classList.add("hide")
+    resume.classList.add("hide")
     
 })
 aboutItem.addEventListener("click", () => {
@@ -197,6 +199,7 @@ aboutItem.addEventListener("click", () => {
     projects.classList.add("hide")
     about.classList.remove("hide")
     contact.classList.add("hide")
+    resume.classList.add("hide")
     
 })
 contactItem.addEventListener("click", () => {
@@ -205,6 +208,17 @@ contactItem.addEventListener("click", () => {
     projects.classList.add("hide")
     about.classList.add("hide")
     contact.classList.remove("hide")
+    resume.classList.add("hide")
+    
+    
+})
+resumeItem.addEventListener("click", () => {
+    menu.classList.add("hide")
+    skills.classList.add("hide")
+    projects.classList.add("hide")
+    about.classList.add("hide")
+    contact.classList.add("hide")
+    resume.classList.remove("hide")
     
     
 })
@@ -498,3 +512,8 @@ function discord(){
 }
 
 /*/ CONTACT /*/
+
+/*/ RESUME /*/
+
+
+/*/ RESUME /*/

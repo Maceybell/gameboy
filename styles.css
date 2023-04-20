@@ -681,6 +681,30 @@ body {
     font-size: 24px;
 }
 
+
+.resume{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+
+.resume-btn{
+  height:200px;
+  width: 200px;
+  font-family: "tenby-stencil", sans-serif;
+  font-size: 38px;
+  border-radius: 20px;
+  background-color: #b3b3fc;
+}
+
+.resume-btn:hover{
+  background-color: #9e9efa;
+  cursor: pointer;
+  
+}
+
+
 .hide {
   display: none;
 }
