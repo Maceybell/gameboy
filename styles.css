@@ -758,6 +758,10 @@ body {
     color: black;
   }
 
+  .menu button {
+    color: black;
+  }
+
   .about-container {
     width: 280px;
     display: flex;
@@ -793,6 +797,10 @@ body {
     right: 77px;
     width: 110px;
     bottom: 245px;
+    color: black;
+  }
+
+  .about-menu button {
     color: black;
   }
 
