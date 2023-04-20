@@ -289,8 +289,6 @@ a:focus {
   top: 100px;
 }
 
-
-
 .close {
   border-radius: 100px;
   position: relative;
@@ -630,7 +628,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:end;
+  justify-content: end;
   background-color: black;
 }
 
@@ -642,7 +640,6 @@ body {
   align-content: center;
   width: 100%;
   justify-content: space-evenly;
-
 }
 .contact-button {
   width: 25%;
@@ -666,31 +663,30 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgb(215, 249, 250);
-
 }
 
-.contact-a:hover, .contact-button:hover{
-    background-color: #98ffff;
+.contact-a:hover,
+.contact-button:hover {
+  background-color: #98ffff;
 }
 
-.contact-text{
-    color: #98ffff;
-    margin: 30px;
-    height: 30px;
-    font-family: "tenby-stencil", sans-serif;
-    font-size: 24px;
+.contact-text {
+  color: #98ffff;
+  margin: 30px;
+  height: 30px;
+  font-family: "tenby-stencil", sans-serif;
+  font-size: 24px;
 }
 
-
-.resume{
+.resume {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #000000;
 }
 
-.resume-btn{
-  height:200px;
+.resume-btn {
+  height: 200px;
   width: 200px;
   font-family: "tenby-stencil", sans-serif;
   font-size: 38px;
@@ -698,116 +694,114 @@ body {
   background-color: #b3b3fc;
 }
 
-.resume-btn:hover{
+.resume-btn:hover {
   background-color: #9e9efa;
   cursor: pointer;
-  
 }
-
 
 .hide {
   display: none;
 }
 
-@media(max-width: 400px) {
-
-
-  body{
+@media (max-width: 400px) {
+  body {
     color: black;
   }
 
-  }
-  .gameboy{
+  .gameboy {
     width: 350px;
     height: 560px;
   }
 
-  .screen-container{
+  .screen-container {
     width: 310px;
-    
   }
 
-  .screen{
+  .screen {
     width: 280px;
     height: 250px;
     flex-direction: center;
   }
 
-  .projects{
+  .projects {
     width: 290px;
   }
 
-  .component{
+  .component {
     width: 280px;
   }
 
-  .a{
+  .a {
     left: 180px;
+    border: #2e2e2e;
   }
 
-  .b{
+  .b {
     left: 70px;
+    border: #2e2e2e;
   }
 
-  .close{
+  .close {
     top: 100px;
+    color: black;
+    border: 1px black solid;
   }
 
-  .mySlides img{
+  .mySlides img {
     width: 280px;
   }
 
-  .menu{
+  .menu {
     position: absolute;
-     left: 201px;
-     height: fit-content;
+    left: 201px;
+    height: fit-content;
+    color: black;
   }
 
-  .about-container{
+  .about-container {
     width: 280px;
     display: flex;
     justify-content: center;
-    
   }
 
-  .about-text{
-    width: 270px;
-    
-  }
-
-  .software-container{
+  .about-text {
     width: 270px;
   }
 
-  .sales-container{
+  .software-container {
     width: 270px;
   }
 
-  .sales-text{
+  .sales-container {
+    width: 270px;
+  }
+
+  .sales-text {
     width: 270px;
     font-size: 9px;
   }
-  .software-text{
+  .software-text {
     width: 270px;
     font-size: 9px;
   }
-  .life-text{
+  .life-text {
     width: 270px;
     font-size: 9px;
   }
 
-  .about-menu{
-    right:77px;
+  .about-menu {
+    right: 77px;
     width: 110px;
     bottom: 245px;
+    color: black;
   }
 
-  .hide{
+  .hide {
     display: none;
   }
 
-
-.scroll{
-  height:800px;
-  width: 100%;
+  .scroll {
+    height: 800px;
+    width: 100%;
+  }
 }
