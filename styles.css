@@ -708,3 +708,96 @@ body {
 .hide {
   display: none;
 }
+
+@media(max-width: 400px) {
+  .gameboy{
+    width: 350px;
+    height: 560px;
+  }
+
+  .screen-container{
+    width: 310px;
+    
+  }
+
+  .screen{
+    width: 280px;
+    height: 250px;
+    flex-direction: center;
+  }
+
+  .projects{
+    width: 290px;
+  }
+
+  .component{
+    width: 280px;
+  }
+
+  .a{
+    left: 180px;
+  }
+
+  .b{
+    left: 70px;
+  }
+
+  .close{
+    top: 100px;
+  }
+
+  .mySlides img{
+    width: 280px;
+  }
+
+  .menu{
+    position: absolute;
+     left: 201px;
+     height: fit-content;
+  }
+
+  .about-container{
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .about-text{
+    width: 270px;
+    
+  }
+
+  .software-container{
+    width: 270px;
+  }
+
+  .sales-container{
+    width: 270px;
+  }
+
+  .sales-text{
+    width: 270px;
+    font-size: 9px;
+  }
+  .software-text{
+    width: 270px;
+    font-size: 9px;
+  }
+  .life-text{
+    width: 270px;
+    font-size: 9px;
+  }
+
+  .about-menu{
+    right:77px;
+    width: 110px;
+    bottom: 245px;
+  }
+
+  .hide{
+    display: none;
+  }
+
+
+}
